@@ -1,4 +1,8 @@
-; OS x86 Build Project ELF Program Assembly Header
+; Nochi Kernel Project - Assembly Startup Entry
+; 
+; Copyright (c) 2026 Kapoti Nora H.
+; SPDX-License-Identifier: Apache-2.0
+; 
 ; kernel/head.asm
 
 bits 32
@@ -34,7 +38,7 @@ stop:
 
 
 section .rodata
-db "OS x86 Build Project"
+db "Nochi Kernel Project"
 db "(c) Project Novalight"
 align 8
 

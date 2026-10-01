@@ -1,4 +1,4 @@
-/* OS x86 Build Project GCC libgcc.a Feauture Defines Header
+/* Nochi Kernel Project GCC Runtime Feauture Defines Header
  * kernel/stdgcc.h
  * WARNING: NOT A STANDARD GNU CODE
  */

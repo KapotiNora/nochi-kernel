@@ -1,4 +1,4 @@
-/* OS x86 Build Project Standard Boolean Value Defines Header
+/* Nochi Kernel Project Standard Boolean Value Defines Header
  * include/stdbool.h
  * WARNING: NOT A STANDARD GNU HEADER
  */

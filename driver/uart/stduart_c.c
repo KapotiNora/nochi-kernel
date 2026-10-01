@@ -1,4 +1,8 @@
-/* OS x86 Build Project Standard UART Upper C Function Defines
+/* Nochi Kernel Project - Standard UART I/O C Implementation.
+ * 
+ * Copyright (c) 2026 Kapoti Nora H.
+ * SPDX-License-Identifier: Apache-2.0
+ * 
  * kernel/stduart_c.c
  */
 
@@ -83,6 +87,7 @@ void uart_printf(const char *fmt, ...) {
 						break;
 					}
 				}
+				break;
 			}
 			
 			case 'c': {

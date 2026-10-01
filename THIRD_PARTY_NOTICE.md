@@ -1,4 +1,4 @@
-# Third Party Notices
+# Nochi Kernel Project Third Party Notices
 
 This project includes third-party software components. The licenses and copyright notices for each component are listed below.
 

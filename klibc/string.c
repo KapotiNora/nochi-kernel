@@ -1,4 +1,4 @@
-/* OS x86 Build Project String Process Function Defines
+/* Nochi Kernel Project String Process Function Defines
  * kernel/string.c
  * WARNING: NOT A STANDARD GNU CODE
  */
@@ -143,15 +143,15 @@ void *memcpy(void *dest, const void *src, size_t n){
 }
 
 bool strcmp(const char *s1, const char *s2) {
-	for(char cmp = 0; ; cmp ++) {
+	for(size_t cmp = 0; ; cmp ++) {
 		if(s1[cmp] != s2[cmp]) {
 			return false;
 		}
 		if(s1[cmp] == '\0') {
-			return true;
+			return 0;
 		}
 	}
-	return false;
+	return 0;
 }
 
 bool memcmp(const void *s1, const void *s2, size_t n) {
@@ -159,10 +159,10 @@ bool memcmp(const void *s1, const void *s2, size_t n) {
 	const uint8_t *p2 = (uint8_t *)s2;
 	
 	for(size_t i = 0; i < n; i ++) {
-		if(p1[i] != p2[i]) return false;
+		if(p1[i] != p2[i]) return 1;
 	}
 	
-	return true;
+	return 0;
 }
 
 bool strncmp(const char *s1, const char *s2, size_t n) {

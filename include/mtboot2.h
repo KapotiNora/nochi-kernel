@@ -1,4 +1,8 @@
-/* OS x86 Build Project MultiBoot 2 Values Define Header
+/* Nochi Kernel Project - Multiboot 2 Information Tags Parsing Definitions.
+ * 
+ * Copyright (c) 2026 Kapoti Nora H.
+ * SPDX-License-Identifier: Apache-2.0
+ * 
  * include/mtboot2.h
  */
 

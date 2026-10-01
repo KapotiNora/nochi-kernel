@@ -1,4 +1,4 @@
-/* OS x86 Build Project Standard String Process Header
+/* Nochi Kernel Project Standard String Process Header
  * include/string.h
  * WARNING: NOT A STANDARD GNU HEADER
  */

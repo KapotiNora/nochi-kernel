@@ -1,4 +1,8 @@
-/* OS x86 Build Project Standard UART I/O Header
+/* Nochi Kernel Project - Standard UART I/O Definitions.
+ * 
+ * Copyright (c) 2026 Kapoti Nora H.
+ * SPDX-License-Identifier: Apache-2.0
+ * 
  * include/stduart.h
  */
 

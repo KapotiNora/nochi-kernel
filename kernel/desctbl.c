@@ -1,4 +1,4 @@
-/* OS x86 Build Project Description Table Function Defines
+/* Nochi Kernel Project Description Table Function Defines
  * kernel/desctbl.c
  */
 

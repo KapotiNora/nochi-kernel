@@ -1,7 +1,16 @@
-/* OS x86 Build Project Linker Script */
+/* Nochi Kernel Project Linker Script */
 /* linker.ld */
 
 ENTRY(_AsmHeadInit)
+
+PHDRS
+{
+	mtbt PT_LOAD FLAGS(4); /* r-- */
+	text PT_LOAD FLAGS(5); /* r-x */
+	data PT_LOAD FLAGS(6); /* rw- */
+	bss  PT_LOAD FLAGS(6); /* rw- */
+	rodt PT_LOAD FLAGS(4); /* r-- */
+}
 
 SECTIONS
 {
@@ -11,31 +20,29 @@ SECTIONS
 	
 	.multiboot2 : {
 		*(.multiboot2)
-	}
+	} : mtbt
 	
-	kern_textstart = .;
 	.text : {
 		. = ALIGN(4);
 		*(.text)
-	}
-	kern_textend = .;
+	} : text
 	
-	kern_datastart = .;
 	.data : {
 		*(.data)
-	}
+	} : data
 	
 	.rodata : {
 		*(.rodata)
-	}
+	} : rodt
 	
 	.bss : {
 		*(.bss)
 		*(COMMON)
-	}
-	kern_dataend = .;
+	} : bss
 	
 	. = ALIGN(4096);
 	
 	kernend = .;
 }
+
+

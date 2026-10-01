@@ -1,4 +1,4 @@
-/* OS x86 Build Project Standard Integer Defines
+/* Nochi Kernel Project Standard Integer Defines
  * include/stdint.h
  * WARNING: NOT A STANDARD GNU HEADER
  */

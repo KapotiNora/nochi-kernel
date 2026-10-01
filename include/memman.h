@@ -1,4 +1,8 @@
-/* OS x86 Build Project MAT32 Memory Manage Defines Header
+/* Nochi Kernel Project - MAT32 Memory Management Definitions.
+ * 
+ * Copyright (c) 2026 Kapoti Nora H.
+ * SPDX-License-Identifier: Apache-2.0
+ * 
  * include/memman.h
  */
 
@@ -16,7 +20,7 @@
 
 #define PTR_IN_AREA(as, ae, p) ((uintptr_t)p >= (uintptr_t)as && (uintptr_t)p <= (uintptr_t)ae)
 
-#define PE_MAX_MEM (4ULL * 1024 * 1024 * 1024) // 4GB
+#define PE_MAX_MEM SIZE_MAX
 #define BYTES_PER_BIT 4096
 #define MAT_SIZE (PE_MAX_MEM / (BYTES_PER_BIT * 8)) // = 128KB
 

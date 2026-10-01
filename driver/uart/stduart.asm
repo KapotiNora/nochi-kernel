@@ -1,4 +1,8 @@
-; OS x86 Build Project Standard UART I/O Assembly Code
+; Nochi Kernel Project - Standard UART I/O Assembly Implementation.
+; 
+; Copyright (c) 2026 Kapoti Nora H.
+; SPDX-License-Identifier: Apache-2.0
+; 
 ; kernel/stduart.asm
 
 bits 32

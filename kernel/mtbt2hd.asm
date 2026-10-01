@@ -1,5 +1,9 @@
-; OS x86 Build Project Multiboot 2 Header
-; boot/mtboot2.asm
+; Nochi Kernel Project - Multiboot 2 Kernel Header
+; 
+; Copyright (c) 2026 Kapoti Nora H.
+; SPDX-License-Identifier: Apache-2.0
+; 
+; kernel/mtbt2hd.asm
 
 section .multiboot2
 

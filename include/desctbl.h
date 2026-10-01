@@ -1,4 +1,8 @@
-/* OS x86 Build Project Description Table Defines Header
+/* Nochi Kernel Project - Description Table Definitions.
+ * 
+ * Copyright (c) 2026 Kapoti Nora H.
+ * SPDX-License-Identifier: Apache-2.0
+ * 
  * include/desctbl.h
  */
 

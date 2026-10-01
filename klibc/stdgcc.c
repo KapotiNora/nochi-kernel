@@ -1,4 +1,4 @@
-/* OS x86 Build Project GCC libgcc.a Feauture Function Defines
+/* Nochi Kernel Project GCC libgcc.a Feauture Function Defines
  * kernel/stdgcc.c
  * WARNING: NOT A STANDARD GNU CODE
  */

@@ -1,4 +1,4 @@
-/* OS x86 Build Project Standard Defines
+/* Nochi Kernel Project Standard Defines
  * include/stddef.h
  * WARNING: NOT A STANDARD GNU HEADER
  */

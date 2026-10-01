@@ -1,3 +1,11 @@
+/* Nochi Kernel Project - Multiboot 2 Information Tags Parsing Implementation.
+ * 
+ * Copyright (c) 2026 Kapoti Nora H.
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * kernel/mtboot2.c
+ */
+
 #include <mtboot2.h>
 #include <klibc/stdint.h>
 #include <klibc/stddef.h>

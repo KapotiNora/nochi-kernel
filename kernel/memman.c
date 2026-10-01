@@ -1,4 +1,8 @@
-/* OS x86 Build Project MAT32 Memory Manage Function Defines
+/* Nochi Kernel Project - MAT32 Memory Management Implementation.
+ * 
+ * Copyright (c) 2026 Kapoti Nora H.
+ * SPDX-License-Identifier: Apache-2.0
+ * 
  * kernel/memman.c
  */
 

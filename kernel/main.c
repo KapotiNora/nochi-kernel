@@ -1,4 +1,8 @@
-/* OS x86 Build Project Kernel Main Process Function Defines
+/* Nochi Kernel Project - Kernel Startup and Main Routine Implementation.
+ * 
+ * Copyright (c) 2026 Kapoti Nora H.
+ * SPDX-License-Identifier: Apache-2.0
+ * 
  * kernel/main.c
  */
 
@@ -48,7 +52,7 @@ void ProgMain(void){
 	uart_puts("[KERN_INFO] memory allocate test start\r\n");
 	uint8_t *p1 = (uint8_t *)memman_alloc(mat_bitmap, 114);
 	uint32_t *p2 = (uint32_t *)memman_alloc(mat_bitmap, 1025);
-	if(!p1 || !p2 || (p1 == p2)) {
+	if(!p1 || !p2 || ((uintptr_t)p1 == (uintptr_t)p2)) {
 		uart_puts("[KERN_PANIC] memory allocate test falied\r\n");
 		return;
 	}

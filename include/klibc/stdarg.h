@@ -1,4 +1,4 @@
-/* OS x86 Build Project Standard Argument Lists Process Macro Defines Header
+/* Nochi Kernel Project Standard Argument Lists Process Macro Defines Header
  * include/stdarg.h
  * WARNING: NOT A STANDARD GNU HEADER
  */

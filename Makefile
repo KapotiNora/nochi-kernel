@@ -1,4 +1,4 @@
-# OS x86 Build Project Makefile
+# Nochi Kernel Project - Makefile
 # Makefile
 
 # Tools
@@ -7,44 +7,45 @@ CC = gcc                   # C Compiler
 LD = ld.bfd                # Linker
 BL = grub-mkrescue         # BootLoader
 EM = qemu-system-i386      # EMulator
-RM = rm -rf
+RM = rm -rf                # ReMove
 
 # Flags
 AFLAGS = -f elf32
-CFLAGS = -m32 -ffreestanding -fno-pie -no-pie -fno-pic -nostdlib -nostdinc -I include/ -g -Wall -c
+CFLAGS = -m32 -ffreestanding -fno-pie -no-pie -fno-pic -nostdlib -nostdinc -I include/ -g -Wall -Wextra -c
 LFLAGS = -T linker.ld -m elf_i386
-EFLAGS = -display sdl -vga std -cdrom
+EFLAGS = -display gtk -vga std -cdrom
 
 
 # Directories & Files
-DIR_BOOTLD = boot
-DIR_KERNEL = kernel
-DIR_BUILD  = build
-DIR_INCLUD = include
-DIR_KLIBC  = klibc
-FLE_KRNOBJ = mtbt2hd.o head.o main.o stduart.o stduart_c.o string.o memman.o stdgcc.o mtboot2.o desctbl.o
+DIR_BOOTLD		=	boot
+DIR_KERNEL		=	kernel
+DIR_BUILD		=	build
+DIR_INCLUD		=	include
+DIR_KLIBC		=	klibc
+DIR_DRIVE		=	$(wildcard driver/*/)
+FLE_UARTOBJ	=	stduart.o stduart_c.o
+FLE_LIBCOBJ	=	stdgcc.o string.o
+FLE_KRNOBJ		=	mtbt2hd.o head.o main.o mtboot2.o memman.o desctbl.o $(FLE_LIBCOBJ) $(FLE_UARTOBJ)
 DIR_GRUBLB = /usr/lib/grub/i386-pc/
 
+vpath %.c   kernel klibc $(DIR_DRIVE)
+vpath %.asm kernel klibc $(DIR_DRIVE)
 
 # Normal rules
-%.o: $(DIR_KERNEL)/%.c
+%.o: %.c
 	$(CC) $(CFLAGS) -o $@ $<
 
-%.o: $(DIR_KERNEL)/%.asm
+%.o: %.asm
 	$(AS) $(AFLAGS) -o $@ $<
-
-%.o: $(DIR_KLIBC)/%.c
-	$(CC) $(CFLAGS) -o $@ $<
 
 oskernel: $(FLE_KRNOBJ)
 	$(LD) $(LFLAGS) $^ -o $@
 
 OSBuild.iso: oskernel
 	mkdir -p $(DIR_BUILD)/boot/
-	cp -r $(DIR_BOOTLD)/grub/ $(DIR_BUILD)/boot/
+	cp -r $(DIR_BOOTLD) $(DIR_BUILD)
 	cp oskernel $(DIR_BUILD)/boot/
 	$(BL) --modules="vbe gfxterm" -d $(DIR_GRUBLB) -o $@ $(DIR_BUILD)
-	
 
 # Build commands
 
